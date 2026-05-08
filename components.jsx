@@ -164,7 +164,7 @@ function About(){
     <section className="about fade-in" id="about">
       <div className="about-inner">
         <div>
-          <Placeholder tone="#e8dfcb" label="PORTRAIT" sub="self-portrait or photo" w={3} h={4} />
+          <img src="https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281391/profile.jpg" alt="portrait" style={{width:'100%', aspectRatio:'3/4', objectFit:'cover'}} />
         </div>
         <div>
           <h2>About <em>me</em></h2>
