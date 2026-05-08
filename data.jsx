@@ -8,7 +8,7 @@ const PORTFOLIO = [
     title: 'Food',
     titleEm: 'Illustration',
     jp: '料理イラスト',
-    desc: '「見たら欲望が沸いた・・・！」と思って頂けるようなイラストを目指して描いております。今年の絵馬ナイラスト・カフェメニューなど、Vtuber様のご依頼で描かせていただきました。',
+    desc: '「見たら食欲が沸いた・・・！」と思って頂けるようなイラストを目指して描いております。',
     cols: 3,
     items: [
       { id:'f1', t:'季節のお弁当（春）', jp:'季節のお弁当・春', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281243/kisetu-obentou-haru.jpg' },
@@ -18,7 +18,11 @@ const PORTFOLIO = [
       { id:'f5', t:'お茶',               jp:'お茶',             src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281243/ocha.jpg' },
       { id:'f6', t:'紅茶',               jp:'紅茶',             src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281242/tea.jpg' },
       { id:'f7', t:'アイスとお揚げ',     jp:'アイスとお揚げ',   src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281242/ice-oage.jpg' },
-      { id:'f8', t:'抹茶ロール',         jp:'抹茶ロール',       src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281242/macharoll.jpg' },
+      { id:'f8', t:'抹茶ロール',           jp:'抹茶ロール',         src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281242/macharoll.jpg' },
+      { id:'f9', t:'バレンタインイラスト', jp:'バレンタインイラスト', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283791/rozemifanart.webp' },
+      { id:'f10', t:'シャンパン',          jp:'シャンパン',          src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283940/champagne.webp' },
+      { id:'f11', t:'カクテル',            jp:'カクテル',            src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283939/kakuteru.webp' },
+      { id:'f12', t:'カクテル2',           jp:'カクテル',            src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283941/kakuteru2.webp' },
     ],
   },
   {
