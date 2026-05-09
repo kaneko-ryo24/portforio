@@ -11,6 +11,7 @@ const PORTFOLIO = [
     desc: '「見たら食欲が沸いた・・・！」と思って頂けるようなイラストを目指して描いております。',
     cols: 3,
     items: [
+      { id:'f0', t:'ラオーラ様配信用イラスト（食べ物のみ担当）', jp:'配信用イラスト', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778363088/haishin-illust.jpg' },
       { id:'f1', t:'季節のお弁当（春）', jp:'季節のお弁当・春', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281243/kisetu-obentou-haru.jpg' },
       { id:'f2', t:'季節のお弁当（夏）', jp:'季節のお弁当・夏', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281243/kisetu-obentou-natsu.jpg' },
       { id:'f3', t:'季節のお弁当（秋）', jp:'季節のお弁当・秋', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281243/kisetu-obentou-aki.jpg' },
@@ -31,7 +32,7 @@ const PORTFOLIO = [
     title: 'Live2D',
     titleEm: 'Work',
     jp: 'Live2D ワーク',
-    desc: '映像に動くことをモットーに制作しており、特に表情が活き活きしたモデルを目指しています。モデルは男性・女性問わず承っております。',
+    desc: '綺麗に動くことをモットーに制作しております。特に表情が活き活きしたモデルを目指しています。モデルは男性・女性問わず承っております。',
     cols: 2,
     items: [
       { id:'l1', t:'オリジナルキャラ',   jp:'立ち絵・パーツ分け', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778284413/originalchara.jpg' },
