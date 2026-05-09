@@ -197,6 +197,25 @@ function About(){
 // ─── Contact ──────────────────────────────────────────────
 function Contact(){
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+
+  async function handleSubmit(e){
+    e.preventDefault();
+    setSending(true);
+    const data = new FormData(e.target);
+    const res = await fetch('https://formspree.io/f/mlgzpwnn', {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' },
+    });
+    if (res.ok) {
+      setSent(true);
+    } else {
+      alert('送信に失敗しました。時間をおいて再度お試しください。');
+    }
+    setSending(false);
+  }
+
   return (
     <section className="contact fade-in" id="contact">
       <div className="eyebrow">Get in touch</div>
@@ -210,20 +229,20 @@ function Contact(){
           Thank you. — ありがとうございます。
         </div>
       ) : (
-        <form className="form" onSubmit={(e)=>{e.preventDefault(); setSent(true);}}>
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form-grid-2">
             <div className="form-row">
               <label>Name <span className="jp">お名前</span></label>
-              <input type="text" required />
+              <input type="text" name="name" required />
             </div>
             <div className="form-row">
               <label>Email <span className="jp">メール</span></label>
-              <input type="email" required />
+              <input type="email" name="email" required />
             </div>
           </div>
           <div className="form-row">
             <label>Project type <span className="jp">ご依頼内容</span></label>
-            <select>
+            <select name="project_type">
               <option>Food illustration / 料理イラスト</option>
               <option>Character illustration / キャラクター</option>
               <option>Live2D model / Live2Dモデル</option>
@@ -233,9 +252,11 @@ function Contact(){
           </div>
           <div className="form-row">
             <label>Message <span className="jp">メッセージ</span></label>
-            <textarea required></textarea>
+            <textarea name="message" required></textarea>
           </div>
-          <button className="submit" type="submit">Send —</button>
+          <button className="submit" type="submit" disabled={sending}>
+            {sending ? 'Sending…' : 'Send —'}
+          </button>
         </form>
       )}
     </section>
