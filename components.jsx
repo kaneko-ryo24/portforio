@@ -127,6 +127,7 @@ function Nav({ active }){
     { href:'#about', label:'About' },
     { href:'#portfolio', label:'Portfolio' },
     { href:'#contact', label:'Contact' },
+    { href:'https://www.otimusya24.com/', label:'Blog', external: true },
   ];
   return (
     <nav className="nav">
@@ -137,7 +138,7 @@ function Nav({ active }){
         </div>
         <div className="nav-links">
           {links.map(l => (
-            <a key={l.href} href={l.href} className={active === l.href.slice(1) ? 'active' : ''}>{l.label}</a>
+            <a key={l.href} href={l.href} className={active === l.href.slice(1) ? 'active' : ''} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener noreferrer' : undefined}>{l.label}</a>
           ))}
         </div>
       </div>
