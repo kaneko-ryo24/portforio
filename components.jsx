@@ -27,8 +27,8 @@ function Tile({ item, category, onOpen }){
   return (
     <figure className={`tile ${isVideo ? 'video' : ''}`} onClick={() => onOpen(item, category)}>
       <div className="tile-inner">
-        {item.src
-          ? <img src={item.src} alt={item.t} loading="lazy" />
+        {(item.thumb || (!isVideo && item.src))
+          ? <img src={item.thumb || item.src} alt={item.t} loading="lazy" />
           : <Placeholder tone={item.tone} label={item.t} sub={isVideo ? '▶ video' : 'illustration'} w={item.w} h={item.h} />}
         {isVideo && (
           <div className="play-icon">
@@ -99,7 +99,9 @@ function Lightbox({ entry, onClose, onPrev, onNext, index, total }){
             <div className="lb-img-wrap">
               {isVideo
                 ? (item.src
-                    ? <video src={item.src} controls autoPlay style={{width:'min(960px,92vw)', aspectRatio:'16/9'}} />
+                    ? (item.src.includes('youtube.com')
+                        ? <iframe src={item.src} allowFullScreen allow="autoplay; encrypted-media" />
+                        : <video src={item.src} controls autoPlay style={{width:'min(960px,92vw)', aspectRatio:'16/9'}} />)
                     : <Placeholder tone={item.tone} label={item.t} sub="▶ video placeholder" w={1600} h={900} />)
                 : (item.src
                     ? <img src={item.src} alt={item.t} />
@@ -164,7 +166,7 @@ function About(){
     <section className="about fade-in" id="about">
       <div className="about-inner">
         <div>
-          <img src="https://res.cloudinary.com/dsljwhlrb/image/upload/v1778281391/profile.jpg" alt="portrait" style={{width:'100%', height:'auto'}} />
+          <img src="https://res.cloudinary.com/dsljwhlrb/image/upload/v1778282958/profile.jpg" alt="portrait" style={{width:'100%', height:'auto'}} />
         </div>
         <div>
           <h2>About <em>me</em></h2>
@@ -233,7 +235,7 @@ function Contact(){
             <label>Message <span className="jp">メッセージ</span></label>
             <textarea required></textarea>
           </div>
-          <button className="submit" type="submit">Send Inquiry —</button>
+          <button className="submit" type="submit">Send —</button>
         </form>
       )}
     </section>
