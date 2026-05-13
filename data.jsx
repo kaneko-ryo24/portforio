@@ -52,7 +52,7 @@ const PORTFOLIO = [
     titleEm: 'Illustration',
     jp: 'デフォルメ・LINEスタンプ',
     desc: 'ご依頼で描かせていただいたイラストや、LINEスタンプのイラストです。',
-    cols: 1,
+    cols: 2,
     items: [
       { id:'s0', t:'SDイラスト', jp:'SDイラスト', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778639279/sd-illustration.avif' },
     ],
