@@ -153,7 +153,7 @@ function Hero(){
       <div className="eyebrow">Portfolio · 2026</div>
       <h1>Kaneko <em>Ryo</em></h1>
       <div className="tag">
-        食・キャラクター・Live2D を中心に活動するイラストレーター。<br/>
+        食べ物・キャラクター・Live2D を中心に活動するイラストレーター。<br/>
         Illustrator focused on food, characters and Live2D rigging.
       </div>
       <div className="scroll-cue">Scroll</div>
@@ -184,10 +184,10 @@ function About(){
             artwork that makes you hungry the moment you see it.
           </p>
           <dl className="info-list">
+            <div className="info-row"><dt>名前</dt><dd>兼子 良</dd></div>
             <div className="info-row"><dt>拠点</dt><dd>日本</dd></div>
             <div className="info-row"><dt>使用ツール</dt><dd>CLIP STUDIO PAINT · Live2D</dd></div>
-            <div className="info-row"><dt>依頼実績</dt><dd>Vtuber事務所・カフェ・個人クリエイター</dd></div>
-            <div className="info-row"><dt>受付中</dt><dd>ご依頼・コラボレーション</dd></div>
+            <div className="info-row"><dt>依頼実績</dt><dd>Vtuber制作・フードイラスト・キャラクターイラスト・背景イラスト</dd></div>
           </dl>
         </div>
       </div>
