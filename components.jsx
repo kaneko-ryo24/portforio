@@ -220,7 +220,7 @@ function Contact(){
   return (
     <section className="contact fade-in" id="contact">
       <div className="eyebrow">Get in touch</div>
-      <h2>Let's <em>work together</em></h2>
+      <h2>Contact</h2>
       <p className="lead">
         ご依頼・お仕事のご相談はこちらから。<br/>
         For commission inquiries, please use the form below.
