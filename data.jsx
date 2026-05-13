@@ -52,15 +52,9 @@ const PORTFOLIO = [
     titleEm: 'Illustration',
     jp: 'デフォルメ・LINEスタンプ',
     desc: 'ご依頼で描かせていただいたイラストや、LINEスタンプのイラストです。',
-    cols: 4,
+    cols: 1,
     items: [
       { id:'s0', t:'SDイラスト', jp:'SDイラスト', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778639279/sd-illustration.avif' },
-      { id:'s1', t:'Chibi Boy — Suit',     jp:'SDキャラクター',  tone:'#dde2ec', w:600, h:900 },
-      { id:'s2', t:'Chibi Girl — Casual',  jp:'SDキャラクター',  tone:'#f7e1cf', w:600, h:900 },
-      { id:'s3', t:'Chibi — Hoodie',       jp:'SDキャラクター',  tone:'#cfd9c5', w:600, h:900 },
-      { id:'s4', t:'French Bulldog Set',   jp:'LINEスタンプ',    tone:'#efe1c8', w:900, h:600 },
-      { id:'s5', t:'Frog Sticker Pack',    jp:'LINEスタンプ',    tone:'#cee0c0', w:900, h:600 },
-      { id:'s6', t:'Hamster Sticker',      jp:'LINEスタンプ',    tone:'#efe5d2', w:900, h:600 },
     ],
   },
   {
