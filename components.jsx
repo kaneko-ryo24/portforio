@@ -252,6 +252,10 @@ function Contact(){
             </select>
           </div>
           <div className="form-row">
+            <label>Budget <span className="jp">ご予算</span></label>
+            <input type="text" name="budget" placeholder="例：10,000円〜" />
+          </div>
+          <div className="form-row">
             <label>Message <span className="jp">メッセージ</span></label>
             <textarea name="message" required></textarea>
           </div>
@@ -269,19 +273,17 @@ function Footer(){
   return (
     <footer>
       <div className="socials">
-        <a href="#" aria-label="X / Twitter">
+        <a href="https://x.com/otimusya_24" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7.5 8.6L22 22h-6.8l-5.3-6.9L3.6 22H.6l8-9.2L0 2h7l4.8 6.3L18 2zm-1 18h1.7L7 4H5.2L17 20z"/></svg>
         </a>
-        <a href="#" aria-label="Pixiv">
+        <a href="https://www.pixiv.net/users/37292946" target="_blank" rel="noopener noreferrer" aria-label="Pixiv">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 4h6.5a4.5 4.5 0 010 9H11v7H9V4zm2 2v5h4.5a2.5 2.5 0 000-5H11z"/></svg>
         </a>
-        <a href="#" aria-label="YouTube">
+        <a href="http://youtube.com/@kaneko_ryo" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5C.6 9.4.6 12 .6 12s0 2.6.4 4.5A3 3 0 003.1 18.6C5 19 12 19 12 19s7 0 8.9-.4A3 3 0 0023 16.5c.4-1.9.4-4.5.4-4.5s0-2.6-.4-4.5zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
         </a>
-        <a href="#" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-            <rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/>
-          </svg>
+        <a href="https://otimusya24.com/" target="_blank" rel="noopener noreferrer" aria-label="Blog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M4 4h16v16H4V4zm0 6h16M10 4v16"/></svg>
         </a>
       </div>
       <div className="copy">© 2026 Kaneko Ryo · All Illustrations Reserved</div>
