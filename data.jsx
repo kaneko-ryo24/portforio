@@ -24,6 +24,9 @@ const PORTFOLIO = [
       { id:'f10', t:'シャンパン',          jp:'',          src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283940/champagne.webp' },
       { id:'f11', t:'カクテル',            jp:'',            src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283939/kakuteru.webp' },
       { id:'f12', t:'カクテル2',           jp:'カクテル',            src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778283941/kakuteru2.webp' },
+      { id:'f13', t:'天丼',   jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653022/tendon_fkvxo9.jpg' },
+      { id:'f14', t:'ごはん', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653207/rice_mb700y.jpg' },
+      { id:'f15', t:'サンドイッチ', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653208/sandwich_tzpc1j.jpg' },
     ],
   },
   {
