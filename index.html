@@ -89,7 +89,6 @@
   .nav-burger.open span:nth-child(2){ opacity: 0; }
   .nav-burger.open span:nth-child(3){ transform: translateY(-6.5px) rotate(-45deg); }
   @media (max-width: 680px){
-    .nav{ position: relative; }
     .nav-inner{ padding: 14px 20px; flex-wrap: nowrap; }
     .nav-burger{ display: flex; }
     .nav .nav-links{
@@ -246,6 +245,9 @@
   }
   @media (max-width: 560px){
     .masonry.cols-3, .masonry.cols-4, .masonry.cols-2{ column-count: 1; }
+    .sec-head{ grid-template-columns: auto 1fr; gap: 12px; }
+    .sec-head .jp{ display: none; }
+    .sec-head .title{ font-size: 22px; }
   }
 
   .tile{
