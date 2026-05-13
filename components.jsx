@@ -184,10 +184,10 @@ function About(){
             artwork that makes you hungry the moment you see it.
           </p>
           <dl className="info-list">
-            <div className="info-row"><dt>Based</dt><dd>Tokyo, Japan</dd></div>
-            <div className="info-row"><dt>Tools</dt><dd>CLIP STUDIO PAINT · Live2D · Blender</dd></div>
-            <div className="info-row"><dt>Clients</dt><dd>Vtuber agencies · cafés · individual creators</dd></div>
-            <div className="info-row"><dt>Open</dt><dd>Commissions, collaborations</dd></div>
+            <div className="info-row"><dt>拠点</dt><dd>日本</dd></div>
+            <div className="info-row"><dt>使用ツール</dt><dd>CLIP STUDIO PAINT · Live2D</dd></div>
+            <div className="info-row"><dt>依頼実績</dt><dd>Vtuber事務所・カフェ・個人クリエイター</dd></div>
+            <div className="info-row"><dt>受付中</dt><dd>ご依頼・コラボレーション</dd></div>
           </dl>
         </div>
       </div>
