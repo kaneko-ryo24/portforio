@@ -5,7 +5,7 @@ const PORTFOLIO = [
   {
     id: 'food',
     num: '01',
-    title: 'Food',
+    title: 'Food Illustration',
     jp: '料理イラスト',
     desc: '「見たら食欲が沸いた・・・！」と思って頂けるようなイラストを目指して描いております。',
     cols: 3,
@@ -34,7 +34,7 @@ const PORTFOLIO = [
   {
     id: 'live2d',
     num: '02',
-    title: 'Live2D',
+    title: 'Live2D Work',
     jp: 'Live2D ワーク',
     desc: '綺麗に動くことをモットーに制作しております。',
     cols: 2,
@@ -52,7 +52,7 @@ const PORTFOLIO = [
   {
     id: 'sd',
     num: '03',
-    title: 'SD',
+    title: 'SD Illustration',
     jp: 'デフォルメ・LINEスタンプ',
     desc: 'ご依頼で描かせていただいたイラストや、LINEスタンプのイラストです。',
     cols: 1,
@@ -64,7 +64,7 @@ const PORTFOLIO = [
   {
     id: 'other',
     num: '04',
-    title: 'Other',
+    title: 'Other Works',
     jp: 'ファンアート・その他',
     desc: '趣味で描いたファンアートや、コンペに応募したイラストです。',
     cols: 3,

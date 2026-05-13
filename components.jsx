@@ -122,6 +122,7 @@ function Lightbox({ entry, onClose, onPrev, onNext, index, total }){
 
 // ─── Nav ──────────────────────────────────────────────────
 function Nav({ active }){
+  const [open, setOpen] = useState(false);
   const links = [
     { href:'#home', label:'Home' },
     { href:'#about', label:'About' },
@@ -136,9 +137,12 @@ function Nav({ active }){
           <span className="name">Kaneko Ryo</span>
           <span className="role">Illustrator</span>
         </a>
-        <div className="nav-links">
+        <button className={`nav-burger${open ? ' open' : ''}`} onClick={() => setOpen(o => !o)} aria-label="メニュー">
+          <span /><span /><span />
+        </button>
+        <div className={`nav-links${open ? ' open' : ''}`}>
           {links.map(l => (
-            <a key={l.href} href={l.href} className={active === l.href.slice(1) ? 'active' : ''} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener noreferrer' : undefined}>{l.label}</a>
+            <a key={l.href} href={l.href} className={active === l.href.slice(1) ? 'active' : ''} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener noreferrer' : undefined} onClick={() => setOpen(false)}>{l.label}</a>
           ))}
         </div>
       </div>
