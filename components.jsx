@@ -25,7 +25,7 @@ function Placeholder({ tone, label, sub, w, h }){
 function Tile({ item, category, onOpen }){
   const isVideo = item.kind === 'video';
   return (
-    <figure className={`tile ${isVideo ? 'video' : ''}`} onClick={() => onOpen(item, category)}>
+    <figure className={`tile ${isVideo ? 'video' : ''}`} style={item.maxWidth ? {maxWidth: item.maxWidth} : undefined} onClick={() => onOpen(item, category)}>
       <div className="tile-inner">
         {(item.thumb || (!isVideo && item.src))
           ? <img src={item.thumb || item.src} alt={item.t} loading="lazy" />
@@ -54,7 +54,7 @@ function Section({ section, onOpen }){
         <span className="jp">{section.jp}</span>
       </header>
       <p className="sec-desc">{section.desc}</p>
-      <div className={`masonry cols-${section.cols}`}>
+      <div className={`masonry cols-${section.cols}`} style={section.center ? {display:'flex', justifyContent:'center'} : undefined}>
         {section.items.map(it => (
           <Tile key={it.id} item={it} category={section.title} onOpen={onOpen} />
         ))}
