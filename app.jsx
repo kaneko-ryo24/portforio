@@ -124,14 +124,15 @@ function App(){
       {showTop && (
         <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
           position: 'fixed', bottom: '32px', right: '32px', zIndex: 150,
-          width: '44px', height: '44px',
-          background: 'var(--ink)', color: 'var(--bg)',
-          border: 'none', cursor: 'pointer',
+          width: '44px', height: '44px', borderRadius: '50%',
+          background: 'var(--bg)', color: 'var(--ink-soft)',
+          border: '1px solid var(--rule)', cursor: 'pointer',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          opacity: 0.8, transition: 'opacity .2s',
+          transition: 'border-color .2s, color .2s',
+          boxShadow: '0 2px 12px rgba(0,0,0,0.08)',
         }} aria-label="トップへ戻る"
-          onMouseEnter={e => e.currentTarget.style.opacity = 1}
-          onMouseLeave={e => e.currentTarget.style.opacity = 0.8}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--ink)'; e.currentTarget.style.color = 'var(--ink)'; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--rule)'; e.currentTarget.style.color = 'var(--ink-soft)'; }}
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 15l-6-6-6 6"/></svg>
         </button>
