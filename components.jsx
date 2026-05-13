@@ -50,7 +50,7 @@ function Section({ section, onOpen }){
     <section className="section fade-in" id={section.id}>
       <header className="sec-head">
         <span className="num">— {section.num}</span>
-        <h2 className="title">{section.title} <em>{section.titleEm}</em></h2>
+        <h2 className="title">{section.title}</h2>
         <span className="jp">{section.jp}</span>
       </header>
       <p className="sec-desc">{section.desc}</p>
