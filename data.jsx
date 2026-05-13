@@ -78,6 +78,8 @@ const PORTFOLIO = [
       { id:'o6', t:'もも', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778640013/momo.jpg' },
       { id:'o7', t:'バニーエリス', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778640013/bunnyeris.jpg' },
       { id:'o8', t:'イラスト', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778640014/G6C3NfyasAElwm8_xbkjbt.jpg' },
+      { id:'o9', t:'イラスト', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653021/18_fzajkc_jm35ln.webp' },
+      { id:'o10', t:'イラスト', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653020/13_nyzroe_bgv5tn.webp' },
     ],
   },
 ];
