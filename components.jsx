@@ -156,7 +156,6 @@ function Hero(){
         食べ物・キャラクター・Live2D を中心に活動するイラストレーター。<br/>
         Illustrator focused on food, characters and Live2D rigging.
       </div>
-      <div className="scroll-cue">Scroll</div>
     </section>
   );
 }
