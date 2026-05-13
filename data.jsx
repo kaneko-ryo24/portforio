@@ -32,7 +32,7 @@ const PORTFOLIO = [
     title: 'Live2D',
     titleEm: 'Work',
     jp: 'Live2D ワーク',
-    desc: '綺麗に動くことをモットーに制作しております。特に表情が活き活きしたモデルを目指しています。モデルは男性・女性問わず承っております。',
+    desc: '綺麗に動くことをモットーに制作しております。',
     cols: 2,
     items: [
       { id:'l1', t:'オリジナルキャラ',   jp:'立ち絵・パーツ分け', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778284413/originalchara.jpg' },
@@ -54,6 +54,7 @@ const PORTFOLIO = [
     desc: 'ご依頼で描かせていただいたイラストや、LINEスタンプのイラストです。',
     cols: 4,
     items: [
+      { id:'s0', t:'SDイラスト', jp:'SDイラスト', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778639279/sd-illustration.avif' },
       { id:'s1', t:'Chibi Boy — Suit',     jp:'SDキャラクター',  tone:'#dde2ec', w:600, h:900 },
       { id:'s2', t:'Chibi Girl — Casual',  jp:'SDキャラクター',  tone:'#f7e1cf', w:600, h:900 },
       { id:'s3', t:'Chibi — Hoodie',       jp:'SDキャラクター',  tone:'#cfd9c5', w:600, h:900 },
