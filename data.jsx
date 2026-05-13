@@ -80,7 +80,8 @@ const PORTFOLIO = [
       { id:'o8', t:'フリーレンファンアート', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778640014/G6C3NfyasAElwm8_xbkjbt.jpg' },
       { id:'o9', t:'エヴァンゲリオン ファンアート', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653021/18_fzajkc_jm35ln.webp' },
       { id:'o10', t:'AFK アリーナ ファンアート', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653020/13_nyzroe_bgv5tn.webp' },
-      { id:'o11', t:'イラスト', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653930/kamvas13_t10s1u.webp' },
+      { id:'o11', t:'HUION Kamvas16(Gen2)レビューイラスト', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778653930/kamvas13_t10s1u.webp' },
+      { id:'o12', t:'イラスト', jp:'', src:'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778654392/snow_qkuns9.webp' },
     ],
   },
 ];
