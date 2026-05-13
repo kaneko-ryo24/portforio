@@ -132,10 +132,10 @@ function Nav({ active }){
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <div className="brand">
+        <a className="brand" href="#home">
           <span className="name">Kaneko Ryo</span>
           <span className="role">Illustrator</span>
-        </div>
+        </a>
         <div className="nav-links">
           {links.map(l => (
             <a key={l.href} href={l.href} className={active === l.href.slice(1) ? 'active' : ''} target={l.external ? '_blank' : undefined} rel={l.external ? 'noopener noreferrer' : undefined}>{l.label}</a>

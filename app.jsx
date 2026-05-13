@@ -101,6 +101,13 @@ function App(){
 
   const currentIndex = entry ? flatList.current.findIndex(e => e.item.id === entry.item.id) : -1;
 
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
       <Nav active={active} />
@@ -113,6 +120,22 @@ function App(){
       </main>
       <Contact />
       <Footer />
+
+      {showTop && (
+        <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{
+          position: 'fixed', bottom: '32px', right: '32px', zIndex: 150,
+          width: '44px', height: '44px',
+          background: 'var(--ink)', color: 'var(--bg)',
+          border: 'none', cursor: 'pointer',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          opacity: 0.8, transition: 'opacity .2s',
+        }} aria-label="トップへ戻る"
+          onMouseEnter={e => e.currentTarget.style.opacity = 1}
+          onMouseLeave={e => e.currentTarget.style.opacity = 0.8}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 15l-6-6-6 6"/></svg>
+        </button>
+      )}
 
       <Lightbox
         entry={entry}
