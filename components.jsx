@@ -253,7 +253,7 @@ function Contact(){
           </div>
           <div className="form-row">
             <label>Budget <span className="jp">ご予算</span></label>
-            <input type="text" name="budget" placeholder="例：10,000円〜" />
+            <input type="text" name="budget" placeholder="例：10,000円" />
           </div>
           <div className="form-row">
             <label>Message <span className="jp">メッセージ</span></label>
