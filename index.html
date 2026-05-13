@@ -92,7 +92,7 @@
     .nav{ position: relative; }
     .nav-inner{ padding: 14px 20px; flex-wrap: nowrap; }
     .nav-burger{ display: flex; }
-    .nav-links{
+    .nav .nav-links{
       display: none;
       position: absolute;
       top: 100%; left: 0; right: 0;
@@ -104,13 +104,13 @@
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid color-mix(in srgb, var(--rule) 60%, transparent);
     }
-    .nav-links.open{ display: flex; }
-    .nav-links a{
+    .nav .nav-links.open{ display: flex; }
+    .nav .nav-links a{
       padding: 11px 0;
       border-bottom: 1px solid color-mix(in srgb, var(--rule) 40%, transparent);
       font-size: 11px;
     }
-    .nav-links a:last-child{ border-bottom: none; }
+    .nav .nav-links a:last-child{ border-bottom: none; }
   }
   .brand{
     display:flex; flex-direction:column; line-height:1;
@@ -245,7 +245,7 @@
     .masonry.cols-3, .masonry.cols-4{ column-count: 2; }
   }
   @media (max-width: 560px){
-    .masonry.cols-3, .masonry.cols-4, .masonry.cols-2{ column-count: 2; }
+    .masonry.cols-3, .masonry.cols-4, .masonry.cols-2{ column-count: 1; }
   }
 
   .tile{
