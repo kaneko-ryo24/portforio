@@ -461,12 +461,6 @@
     display: grid;
     gap: 12px;
   }
-  .featured-links{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-bottom: 4px;
-  }
   .link-card{
     --link-accent: var(--accent);
     min-height: 78px;
@@ -484,10 +478,6 @@
     transform: translateY(-2px);
     border-color: color-mix(in srgb, var(--link-accent) 55%, var(--rule));
     box-shadow: 0 14px 32px rgba(25,22,16,.08);
-  }
-  .link-card.featured{
-    min-height: 104px;
-    border-color: color-mix(in srgb, var(--link-accent) 40%, var(--rule));
   }
   .link-mark{
     width: 48px;
@@ -557,9 +547,6 @@
     .linkhub-profile img{
       margin-left: auto;
       margin-right: auto;
-    }
-    .featured-links{
-      grid-template-columns: 1fr;
     }
   }
   @media (max-width: 420px){

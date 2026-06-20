@@ -91,11 +91,11 @@ function LinkMark({ image }){
   );
 }
 
-function LinkCard({ link, featured }){
+function LinkCard({ link }){
   const external = !link.kind && /^https?:\/\//.test(link.href);
   return (
     <a
-      className={`link-card${featured ? ' featured' : ''}`}
+      className="link-card"
       href={link.href}
       target={external ? '_blank' : undefined}
       rel={external ? 'noopener noreferrer' : undefined}
@@ -132,9 +132,6 @@ function LinkHub(){
         </header>
 
         <div className="linkhub-list" aria-label="リンク集">
-          <div className="featured-links">
-            {hub.featured.map(link => <LinkCard key={link.id} link={link} featured />)}
-          </div>
           {hub.links.map(link => <LinkCard key={link.id} link={link} />)}
         </div>
       </div>

@@ -92,10 +92,6 @@ const LINK_HUB = {
     image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778282958/profile.jpg',
     email: 'otimusya24@gmail.com',
   },
-  featured: [
-    { id: 'commission', title: 'ご依頼・お問い合わせ', desc: '制作相談、料金感、スケジュールの確認はこちら', href: '#contact', kind: 'internal', accent: '#c64a3a' },
-    { id: 'portfolio', title: 'ポートフォリオ', desc: '食べ物イラスト、Live2D、SD、その他制作実績', href: '#portfolio', kind: 'internal', accent: '#1a1a1a' },
-  ],
   links: [
     { id: 'blog', title: 'ブログ', desc: 'ガジェットレビューや制作まわりの記事', href: 'https://otimusya24.com/', label: 'Blog', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/blog-kaneko_cs35yz.jpg' },
     { id: 'skeb', title: 'Skeb', desc: 'Commission', href: 'https://skeb.jp/@otimusya_24', label: 'Skeb', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Skeb_fkrtwe.png' },
