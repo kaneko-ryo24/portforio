@@ -252,15 +252,8 @@ function About(){
           <h2>About <em>me</em></h2>
           <div className="h2-jp">プロフィール</div>
           <p>
-            イラストレーター・Live2Dデザイナー。<br/>
-            食べ物・キャラクター・Vtuberモデルを中心に制作活動を行っています。
-            「見たら欲望が沸いた・・・！」と思って頂けるような熱量のあるイラストを目指して、
-            日々スケッチと観察を重ねています。
-          </p>
-          <p>
-            An illustrator and Live2D rigger working across food illustration,
-            original characters, and Vtuber model production. Always aiming for
-            artwork that makes you hungry the moment you see it.
+            イラストレーター・Live2Dモデラー・ブロガー。<br/>
+            会社員として働きながらイラスト制作やブログ執筆を行っています。
           </p>
           <dl className="info-list">
             <div className="info-row"><dt>名前</dt><dd>兼子 良</dd></div>
