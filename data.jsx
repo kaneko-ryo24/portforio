@@ -83,3 +83,29 @@ const PORTFOLIO = [
 ];
 
 window.PORTFOLIO = PORTFOLIO;
+
+const LINK_HUB = {
+  profile: {
+    name: '兼子 良',
+    role: 'Illustrator / Live2D',
+    bio: '食べ物・キャラクター・Live2D制作を中心に活動しています。ご依頼や各SNSはこちらからどうぞ。',
+    image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778282958/profile.jpg',
+    email: 'otimusya24@gmail.com',
+  },
+  featured: [
+    { id: 'commission', title: 'ご依頼・お問い合わせ', desc: '制作相談、料金感、スケジュールの確認はこちら', href: '#contact', kind: 'internal', accent: '#c64a3a' },
+    { id: 'portfolio', title: 'ポートフォリオ', desc: '食べ物イラスト、Live2D、SD、その他制作実績', href: '#portfolio', kind: 'internal', accent: '#1a1a1a' },
+  ],
+  links: [
+    { id: 'blog', title: 'ブログ', desc: 'ガジェットレビューや制作まわりの記事', href: 'https://otimusya24.com/', label: 'Blog', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/blog-kaneko_cs35yz.jpg' },
+    { id: 'skeb', title: 'Skeb', desc: 'Commission', href: 'https://skeb.jp/@otimusya_24', label: 'Skeb', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Skeb_fkrtwe.png' },
+    { id: 'vgen', title: 'VGen', desc: 'Commission', href: 'https://vgen.co/kaneko', label: 'VGen', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Vgen_svwepa.png' },
+    { id: 'marshmallow', title: 'マシュマロ', desc: 'questions', href: 'https://t.co/EiW23BEEZW', label: 'Q&A', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/marshmallow_fmujd7.jpg' },
+    { id: 'x', title: 'X', desc: '最新のお知らせ・制作ログ', href: 'https://twitter.com/otimusya_24', label: 'X', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/X_gv2xth.avif' },
+    { id: 'pixiv', title: 'pixiv', desc: 'イラスト投稿', href: 'https://www.pixiv.net/users/37292946', label: 'Pixiv', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/pixiv_hiuj5o.png' },
+    { id: 'youtube', title: 'YouTube', desc: '制作動画やLive2D関連', href: 'https://www.youtube.com/@kaneko_ryo', label: 'YouTube', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781918565/youtube_vc6mxl.png' },
+    { id: 'wishlist', title: '欲しいものリスト', desc: 'ご支援いただけると嬉しいです', href: 'https://www.amazon.jp/hz/wishlist/ls/19RI3FM206NJW?ref_=wl_share', label: 'Amazon', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781918059/amazon_xwgglv.webp' },
+  ],
+};
+
+window.LINK_HUB = LINK_HUB;

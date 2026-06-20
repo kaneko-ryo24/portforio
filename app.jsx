@@ -71,7 +71,7 @@ function App(){
 
   // scroll spy
   useEffect(() => {
-    const sections = ['home','about','portfolio','contact'];
+    const sections = ['home','about','links','portfolio','contact'];
     const onScroll = () => {
       const y = window.scrollY + 120;
       let cur = 'home';
@@ -113,6 +113,7 @@ function App(){
       <Nav active={active} />
       <Hero />
       <About />
+      <LinkHub />
       <main id="portfolio">
         {PORTFOLIO.map(sec => (
           <Section key={sec.id} section={sec} onOpen={openLightbox} />

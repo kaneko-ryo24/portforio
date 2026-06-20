@@ -64,6 +64,84 @@ function Section({ section, onOpen }){
 }
 
 // ─── Lightbox ─────────────────────────────────────────────
+function trackLinkClick(link){
+  if (typeof window.gtag !== 'function') return;
+  window.gtag('event', 'link_click', {
+    link_id: link.id,
+    link_title: link.title,
+    link_url: link.href,
+    event_category: 'link_hub',
+    transport_type: 'beacon',
+  });
+}
+
+function LinkMark({ image }){
+  return (
+    <span className="link-mark" aria-hidden="true">
+      {image ? (
+        <img src={image} alt="" loading="lazy" />
+      ) : (
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+          <path d="M10.5 13.5l3-3" />
+          <path d="M8.5 16.5l-1 .1a4 4 0 01-2.9-6.9l2.1-2.1a4 4 0 015.7 0" />
+          <path d="M15.5 7.5l1-.1a4 4 0 012.9 6.9l-2.1 2.1a4 4 0 01-5.7 0" />
+        </svg>
+      )}
+    </span>
+  );
+}
+
+function LinkCard({ link, featured }){
+  const external = !link.kind && /^https?:\/\//.test(link.href);
+  return (
+    <a
+      className={`link-card${featured ? ' featured' : ''}`}
+      href={link.href}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      onClick={() => trackLinkClick(link)}
+      style={link.accent ? {'--link-accent': link.accent} : undefined}
+    >
+      <LinkMark image={link.image} />
+      <span className="link-copy">
+        <span className="link-title">{link.title}</span>
+        <span className="link-desc">{link.desc}</span>
+      </span>
+      <span className="link-arrow" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </span>
+    </a>
+  );
+}
+
+function LinkHub(){
+  const hub = window.LINK_HUB;
+  if (!hub) return null;
+  return (
+    <section className="linkhub fade-in" id="links">
+      <div className="linkhub-inner">
+        <header className="linkhub-profile">
+          <img src={hub.profile.image} alt={hub.profile.name} />
+          <div className="eyebrow">Links</div>
+          <h2>{hub.profile.name}</h2>
+          <p className="role">{hub.profile.role}</p>
+          <p className="bio">{hub.profile.bio}</p>
+          <a className="mail-link" href={`mailto:${hub.profile.email}`} onClick={() => trackLinkClick({ id:'email', title:'Email', href:`mailto:${hub.profile.email}` })}>
+            {hub.profile.email}
+          </a>
+        </header>
+
+        <div className="linkhub-list" aria-label="リンク集">
+          <div className="featured-links">
+            {hub.featured.map(link => <LinkCard key={link.id} link={link} featured />)}
+          </div>
+          {hub.links.map(link => <LinkCard key={link.id} link={link} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Lightbox({ entry, onClose, onPrev, onNext, index, total }){
   useEffect(() => {
     if (!entry) return;
@@ -126,9 +204,10 @@ function Nav({ active }){
   const links = [
     { href:'#home', label:'Home' },
     { href:'#about', label:'About' },
+    { href:'#links', label:'Links' },
     { href:'#portfolio', label:'Portfolio' },
     { href:'#contact', label:'Contact' },
-    { href:'https://www.otimusya24.com/', label:'Blog', external: true },
+    { href:'https://otimusya24.com/', label:'Blog', external: true },
   ];
   return (
     <nav className="nav">
@@ -276,13 +355,13 @@ function Footer(){
   return (
     <footer>
       <div className="socials">
-        <a href="https://x.com/otimusya_24" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
+        <a href="https://twitter.com/otimusya_24" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7.5 8.6L22 22h-6.8l-5.3-6.9L3.6 22H.6l8-9.2L0 2h7l4.8 6.3L18 2zm-1 18h1.7L7 4H5.2L17 20z"/></svg>
         </a>
         <a href="https://www.pixiv.net/users/37292946" target="_blank" rel="noopener noreferrer" aria-label="Pixiv">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 4h6.5a4.5 4.5 0 010 9H11v7H9V4zm2 2v5h4.5a2.5 2.5 0 000-5H11z"/></svg>
         </a>
-        <a href="http://youtube.com/@kaneko_ryo" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <a href="https://www.youtube.com/@kaneko_ryo" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.5a3 3 0 00-2.1-2.1C19 5 12 5 12 5s-7 0-8.9.4A3 3 0 001 7.5C.6 9.4.6 12 .6 12s0 2.6.4 4.5A3 3 0 003.1 18.6C5 19 12 19 12 19s7 0 8.9-.4A3 3 0 0023 16.5c.4-1.9.4-4.5.4-4.5s0-2.6-.4-4.5zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
         </a>
         <a href="https://otimusya24.com/" target="_blank" rel="noopener noreferrer" aria-label="Blog">
@@ -294,4 +373,4 @@ function Footer(){
   );
 }
 
-Object.assign(window, { Tile, Section, Lightbox, Nav, Hero, About, Contact, Footer, Placeholder });
+Object.assign(window, { Tile, Section, LinkHub, Lightbox, Nav, Hero, About, Contact, Footer, Placeholder });
