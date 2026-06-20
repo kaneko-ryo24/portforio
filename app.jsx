@@ -69,6 +69,21 @@ function App(){
     r.style.setProperty('--accent', t.accent || '#1a1a1a');
   }, [t.accent, t.theme]);
 
+  // React renders after the browser's initial hash jump, so replay it once mounted.
+  useEffect(() => {
+    const scrollToHash = () => {
+      const id = decodeURIComponent(window.location.hash.replace('#', ''));
+      if (!id) return;
+      requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ block: 'start' });
+      });
+    };
+    scrollToHash();
+    window.addEventListener('hashchange', scrollToHash);
+    return () => window.removeEventListener('hashchange', scrollToHash);
+  }, []);
+
   // scroll spy
   useEffect(() => {
     const sections = ['home','about','links','portfolio','contact'];
