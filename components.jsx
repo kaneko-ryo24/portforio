@@ -325,7 +325,7 @@ function Contact(){
           </div>
           <div className="form-row">
             <label>Budget <span className="jp">ご予算</span></label>
-            <input type="text" name="budget" placeholder="例：10,000円" />
+            <input type="text" name="budget" placeholder="ご予算をご記載ください。不明な場合は空欄で構いません" />
           </div>
           <div className="form-row">
             <label>Message <span className="jp">メッセージ</span></label>
