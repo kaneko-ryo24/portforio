@@ -93,6 +93,7 @@ const LINK_HUB = {
     email: 'otimusya24@gmail.com',
   },
   links: [
+    { id: 'patreon', title: 'Patreon', desc: 'Support', href: 'https://www.patreon.com/cw/kaneko_ryo', label: 'Patreon', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1785761695/patreon_jnw50v.webp' },
     { id: 'blog', title: 'ブログ', desc: 'ガジェットレビューや制作まわりの記事', href: 'https://otimusya24.com/', label: 'Blog', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/blog-kaneko_cs35yz.jpg' },
     { id: 'skeb', title: 'Skeb', desc: 'Commission', href: 'https://skeb.jp/@otimusya_24', label: 'Skeb', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Skeb_fkrtwe.png' },
     { id: 'vgen', title: 'VGen', desc: 'Commission', href: 'https://vgen.co/kaneko', label: 'VGen', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Vgen_svwepa.png' },
