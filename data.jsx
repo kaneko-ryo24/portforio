@@ -96,6 +96,7 @@ const LINK_HUB = {
     { id: 'blog', title: 'ブログ', desc: 'ガジェットレビューや制作まわりの記事', href: 'https://otimusya24.com/', label: 'Blog', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/blog-kaneko_cs35yz.jpg' },
     { id: 'skeb', title: 'Skeb', desc: 'Commission', href: 'https://skeb.jp/@otimusya_24', label: 'Skeb', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Skeb_fkrtwe.png' },
     { id: 'vgen', title: 'VGen', desc: 'Commission', href: 'https://vgen.co/kaneko', label: 'VGen', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/Vgen_svwepa.png' },
+    { id: 'work-request', title: 'お仕事依頼', desc: 'ご依頼はこちらから', href: 'https://kaneko-portfolio.com/#contact', label: 'Contact', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1778282958/profile.jpg' },
     { id: 'marshmallow', title: '質問', desc: 'お気軽にどうぞ', href: 'https://t.co/EiW23BEEZW', label: 'Question', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/marshmallow_fmujd7.jpg' },
     { id: 'x', title: 'X', desc: 'イラストアップしています', href: 'https://twitter.com/otimusya_24', label: 'X', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/X_gv2xth.avif' },
     { id: 'pixiv', title: 'pixiv', desc: 'イラストが一覧で見れます', href: 'https://www.pixiv.net/users/37292946', label: 'Pixiv', image: 'https://res.cloudinary.com/dsljwhlrb/image/upload/v1781917993/pixiv_hiuj5o.png' },

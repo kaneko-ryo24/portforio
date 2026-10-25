@@ -314,16 +314,6 @@ function Contact(){
             </div>
           </div>
           <div className="form-row">
-            <label>Project type <span className="jp">ご依頼内容</span></label>
-            <select name="project_type">
-              <option>Food illustration / 料理イラスト</option>
-              <option>Character illustration / キャラクター</option>
-              <option>Live2D model / Live2Dモデル</option>
-              <option>LINE stamp / LINEスタンプ</option>
-              <option>Other / その他</option>
-            </select>
-          </div>
-          <div className="form-row">
             <label>Budget <span className="jp">ご予算</span></label>
             <input type="text" name="budget" placeholder="ご予算をご記載ください。不明な場合は空欄で構いません" />
           </div>
