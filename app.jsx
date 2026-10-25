@@ -71,17 +71,44 @@ function App(){
 
   // React renders after the browser's initial hash jump, so replay it once mounted.
   useEffect(() => {
+    let correctionTimer;
+
+    const alignToHash = (id, behavior = 'smooth') => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const scrollMargin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
+      const top = window.scrollY + el.getBoundingClientRect().top - scrollMargin;
+      window.scrollTo({ top, behavior });
+    };
+
     const scrollToHash = () => {
       const id = decodeURIComponent(window.location.hash.replace('#', ''));
       if (!id) return;
+
+      clearTimeout(correctionTimer);
       requestAnimationFrame(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ block: 'start' });
+        alignToHash(id);
+
+        // Lazy-loaded portfolio images can change the page height during a long
+        // scroll. Recalculate once the animation and image layout have settled.
+        correctionTimer = setTimeout(() => {
+          if (window.location.hash === `#${id}`) {
+            const root = document.documentElement;
+            const previousBehavior = root.style.scrollBehavior;
+            root.style.scrollBehavior = 'auto';
+            alignToHash(id, 'auto');
+            root.style.scrollBehavior = previousBehavior;
+          }
+        }, 1000);
       });
     };
     scrollToHash();
     window.addEventListener('hashchange', scrollToHash);
-    return () => window.removeEventListener('hashchange', scrollToHash);
+    return () => {
+      clearTimeout(correctionTimer);
+      window.removeEventListener('hashchange', scrollToHash);
+    };
   }, []);
 
   // scroll spy
